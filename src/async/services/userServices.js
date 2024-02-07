@@ -1,4 +1,4 @@
-import { get, post } from "../api";
+import { get, post } from '../api';
 
 export const getUsers = (endpoint, payload) => get(endpoint, payload);
 

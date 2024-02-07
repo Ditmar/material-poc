@@ -19,13 +19,13 @@ const parseEnvBoolean = (envVar) => {
   if (!envVarValue) {
     throw new Error(`Environment variable ${envVar} is not set`);
   }
-  return envVarValue === "true";
+  return envVarValue === 'true';
 };
 
 const getEnvVariables = () => {
-  const SITENAME = parseEnvString("REACT_APP_SITE_NAME");
-  const HOST = parseEnvString("REACT_APP_BACKEND_HOST");
-  const SERVICE = parseEnvString("REACT_APP_BACKEND_SERVICE");
+  const SITENAME = parseEnvString('REACT_APP_SITE_NAME');
+  const HOST = parseEnvString('REACT_APP_BACKEND_HOST');
+  const SERVICE = parseEnvString('REACT_APP_BACKEND_SERVICE');
   return { SITENAME, HOST, SERVICE };
 };
 export default getEnvVariables;
