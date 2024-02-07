@@ -26,6 +26,7 @@ const getEnvVariables = () => {
   const SITENAME = parseEnvString("REACT_APP_SITE_NAME");
   const HOST = parseEnvString("REACT_APP_BACKEND_HOST");
   const SERVICE = parseEnvString("REACT_APP_BACKEND_SERVICE");
-  return { SITENAME, HOST, SERVICE };
+  const API_BACKEND = process.env.REACT_APP_API_BACKEND
+  return { SITENAME, HOST, SERVICE ,API_BACKEND};
 };
 export default getEnvVariables;
