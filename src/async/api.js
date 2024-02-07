@@ -1,6 +1,6 @@
 const getHeaders = () => {
   const headers = {
-    "Content-Type": "application/json",
+    'Content-Type': 'application/json',
   };
   return headers;
 };
@@ -10,15 +10,15 @@ const buildOptions = (payload, method, isFile) => {
     method,
     headers: isFile ? {} : getHeaders(),
   };
-  if (method === "POST") {
-    options["body"] = isFile ? payload : JSON.stringify(payload);
+  if (method === 'POST') {
+    options['body'] = isFile ? payload : JSON.stringify(payload);
   }
   return options;
 };
 
 const request = async (endpoint, payload, method, isFile) => {
   const options = buildOptions(payload, method, isFile);
-  console.log("here");
+  console.log('here');
   const response = await fetch(endpoint, options);
   console.log(response);
   if (response.ok) {
@@ -34,7 +34,7 @@ const request = async (endpoint, payload, method, isFile) => {
 };
 
 export const post = async (endpoint, payload, isFile = false) =>
-  request(endpoint, payload, "POST", isFile);
+  request(endpoint, payload, 'POST', isFile);
 
 export const get = async (endpoint, payload, isFile = false) =>
-  request(endpoint, payload, "GET", isFile);
+  request(endpoint, payload, 'GET', isFile);
