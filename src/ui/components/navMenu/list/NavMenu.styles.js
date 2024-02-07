@@ -15,5 +15,11 @@ const useStyles = makeStyles((theme) => ({
     },
     border: "1px solid #000",
   },
+
+  container:{
+    width: '100vw',
+    overflow: 'hidden',
+    justifyContent:"center"
+  }
 }));
 export default useStyles;
