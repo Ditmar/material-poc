@@ -1,4 +1,4 @@
-const getHeaders = () => {
+/* const getHeaders = () => {
   const headers = {
     "Content-Type": "application/json",
   };
@@ -38,3 +38,4 @@ export const post = async (endpoint, payload, isFile = false) =>
 
 export const get = async (endpoint, payload, isFile = false) =>
   request(endpoint, payload, "GET", isFile);
+ */

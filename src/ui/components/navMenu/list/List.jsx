@@ -1,7 +1,8 @@
 import useStyles from "./NavMenu.styles";
 export const List = (props) => {
-  const { data } = props;
-  const { list } = data;
+  //const { data } = props;
+  //const { list } = data;
+  const { list } = props;
   const classes = useStyles();
   return (
     <nav className={classes.wrapper}>
@@ -15,3 +16,4 @@ export const List = (props) => {
     </nav>
   );
 };
+
